@@ -6,3 +6,4 @@ const kEmail = 'Deseure.s@gmail.com';
 
 const kGitHub = 'https://github.com/ExileNoir';
 const kBitBucket = 'https://bitbucket.org/ExileNoir/';
+const kLinkedIn = 'https://www.linkedin.com/in/deseuresteven';
