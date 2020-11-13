@@ -1,4 +1,4 @@
-import 'package:deseure_steven_card/my_page.dart';
+import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/view/my_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 

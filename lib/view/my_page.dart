@@ -1,12 +1,10 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:deseure_steven_card/constants.dart';
 import 'package:deseure_steven_card/icons/cv_one_icons.dart';
-import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/icons/cv_icons.dart';
-import 'package:deseure_steven_card/pdf_view_page.dart';
-import 'package:deseure_steven_card/reusable_card.dart';
-import 'package:deseure_steven_card/reusable_icon.dart';
+import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/view/pdf_view_page.dart';
+import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/reusables/reusable_card.dart';
+import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/reusables/reusable_icon.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
@@ -14,6 +12,8 @@ import 'package:flutter_svg/flutter_svg.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 import 'package:path_provider/path_provider.dart';
 import 'package:url_launcher/url_launcher.dart';
+
+import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/constants/constants.dart';
 
 class MyPage extends StatefulWidget {
   @override
