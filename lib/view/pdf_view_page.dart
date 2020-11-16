@@ -1,7 +1,10 @@
 import 'dart:async';
 
+import 'package:deseure_steven_card/view/my_page.dart';
+import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
+import 'package:font_awesome_flutter/font_awesome_flutter.dart';
 
 class PdfViewPage extends StatefulWidget {
   final String path;
@@ -37,32 +40,61 @@ class _PdfViewPageState extends State<PdfViewPage> with WidgetsBindingObserver {
 
     return Scaffold(
       key: _pdfViewerKey,
-      appBar: AppBar(
-        backgroundColor: Colors.teal,
-        // title: Text('My CV'),
-      ),
-      body: Stack(
-        fit: StackFit.loose,
-        children: [
-          PDFView(
-            filePath: widget.path,
-            autoSpacing: true,
-            enableSwipe: true,
-            nightMode: false,
-            pageFling: true,
-            swipeHorizontal: true,
-            fitPolicy: FitPolicy.WIDTH,
-            onRender: (_pages) {
-              setState(() {
-                _pdfReady = true;
-              });
+      floatingActionButton: Align(
+        alignment: Alignment.bottomLeft,
+        child: Container(
+          width: 65.0,
+          height: 55.0,
+          child: FloatingActionButton(
+            onPressed: () {
+              Navigator.pop(
+                context,
+                MaterialPageRoute(builder: (context) {
+                  return MyPage();
+                }),
+              );
             },
-            onViewCreated: (final PDFViewController pdfViewController) {
-              _controller.complete(pdfViewController);
-            },
+            backgroundColor: Colors.blue,
+            tooltip: 'Menu',
+            child: Padding(
+              padding: const EdgeInsets.only(left: 13.0),
+              child: Icon(Icons.keyboard_backspace_rounded),
+            ),
+            shape: RoundedRectangleBorder(
+              borderRadius: BorderRadius.horizontal(
+                right: Radius.circular(20.0),
+              ),
+              side: BorderSide(color: Colors.teal, width: 2.0),
+            ),
           ),
-          !_pdfReady ? Center(child: CircularProgressIndicator()) : Offstage(),
-        ],
+        ),
+      ),
+      body: Container(
+        child: Stack(
+          fit: StackFit.loose,
+          children: [
+            PDFView(
+              filePath: widget.path,
+              autoSpacing: true,
+              enableSwipe: true,
+              nightMode: false,
+              pageFling: true,
+              swipeHorizontal: true,
+              fitPolicy: FitPolicy.WIDTH,
+              onRender: (_pages) {
+                setState(() {
+                  _pdfReady = true;
+                });
+              },
+              onViewCreated: (final PDFViewController pdfViewController) {
+                _controller.complete(pdfViewController);
+              },
+            ),
+            !_pdfReady
+                ? Center(child: CircularProgressIndicator())
+                : Offstage(),
+          ],
+        ),
       ),
     );
   }
