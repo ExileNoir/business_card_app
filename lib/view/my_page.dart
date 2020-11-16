@@ -92,9 +92,10 @@ class _MyPageState extends State<MyPage> {
                   ),
                 ),
                 Expanded(
+                  flex: 2,
                   child: Column(
                     children: [
-                      sizedBox(60),
+                      sizedBox(40),
                       ReusableCard(
                         onPress: () {
                           launch("tel://$kMobileNumber");
@@ -111,8 +112,10 @@ class _MyPageState extends State<MyPage> {
                   ),
                 ),
                 Expanded(
+                  flex: 0,
                   child: Row(
                     mainAxisAlignment: MainAxisAlignment.center,
+                    crossAxisAlignment: CrossAxisAlignment.end,
                     children: [
                       Expanded(
                         child: ReusableIcons(

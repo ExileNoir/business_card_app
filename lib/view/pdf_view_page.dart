@@ -1,7 +1,6 @@
 import 'dart:async';
 
 import 'package:deseure_steven_card/view/my_page.dart';
-import 'package:flutter/gestures.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_pdfview/flutter_pdfview.dart';
 import 'package:font_awesome_flutter/font_awesome_flutter.dart';
