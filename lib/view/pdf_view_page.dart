@@ -29,8 +29,6 @@ class _PdfViewPageState extends State<PdfViewPage> with WidgetsBindingObserver {
     final _isLandscape =
         MediaQuery.of(context).orientation == Orientation.landscape;
 
-    print('is landScap: $_isLandscape'); // debug purpose
-
     if (_isLandscape) {
       _futureLandscapeBuilder();
     }
@@ -43,8 +41,8 @@ class _PdfViewPageState extends State<PdfViewPage> with WidgetsBindingObserver {
       floatingActionButton: Align(
         alignment: Alignment.bottomLeft,
         child: Container(
-          width: 65.0,
-          height: 55.0,
+          width: 45.0,
+          height: 35.0,
           child: FloatingActionButton(
             onPressed: () {
               Navigator.pop(
@@ -54,11 +52,11 @@ class _PdfViewPageState extends State<PdfViewPage> with WidgetsBindingObserver {
                 }),
               );
             },
-            backgroundColor: Colors.blue,
-            tooltip: 'Menu',
+            backgroundColor: Colors.teal,
+            tooltip: 'Previous',
             child: Padding(
               padding: const EdgeInsets.only(left: 13.0),
-              child: Icon(Icons.keyboard_backspace_rounded),
+              child: Icon(FontAwesomeIcons.arrowCircleLeft),
             ),
             shape: RoundedRectangleBorder(
               borderRadius: BorderRadius.horizontal(
