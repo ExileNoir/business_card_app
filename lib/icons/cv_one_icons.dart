@@ -11,7 +11,7 @@
 ///      fonts:
 ///       - asset: fonts/CvOne.ttf
 ///
-/// 
+///
 ///
 import 'package:flutter/widgets.dart';
 
@@ -21,5 +21,6 @@ class CvOne {
   static const _kFontFam = 'CvOne';
   static const _kFontPkg = null;
 
-  static const IconData curriculum_vitae__4_ = IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
+  static const IconData curriculum_vitae__4_ =
+      IconData(0xe800, fontFamily: _kFontFam, fontPackage: _kFontPkg);
 }
