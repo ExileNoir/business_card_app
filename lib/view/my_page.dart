@@ -1,10 +1,9 @@
 import 'dart:async';
 import 'dart:io';
 
-import 'package:deseure_steven_card/icons/cv_one_icons.dart';
-import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/view/pdf_view_page.dart';
-import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/reusables/reusable_card.dart';
-import 'file:///C:/Users/Steven/Desktop/PROJECTS/CourseBook/FlutterCourse/deseure_steven_card/lib/reusables/reusable_icon.dart';
+import 'package:deseure_steven_card/reusables/reusable_card.dart';
+import 'package:deseure_steven_card/reusables/reusable_icon.dart';
+import 'package:deseure_steven_card/view/pdf_view_page.dart';
 import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter/services.dart';
