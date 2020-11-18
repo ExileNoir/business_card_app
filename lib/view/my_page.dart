@@ -160,8 +160,8 @@ class _MyPageState extends State<MyPage> {
                           },
                           color: Colors.teal,
                           cardChild: Icon(
-                            CvOne.curriculum_vitae__4_,
-                            // FontAwesomeIcons.solidFilePdf,
+                            // CvOne.curriculum_vitae__4_,
+                            FontAwesomeIcons.solidFilePdf,
                             size: 35,
                           ),
                         ),
